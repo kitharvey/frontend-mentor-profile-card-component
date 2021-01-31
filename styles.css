@@ -19,20 +19,9 @@ body{
     position: relative;
     background-color: #19a1ad;
     position: relative;
-}
-.bg-top-left{
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index: 0;
-    transform: translateX(-25%) translateY(-50%);
-}
-.bg-bottom-right{
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    z-index: 0;
-    transform: translateX(25%) translateY(50%);
+    background-image: url(./images/bg-pattern-top.svg), url(./images/bg-pattern-bottom.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-position: top -500px left -400px, bottom -500px right -400px;
 }
 
 .attribution { font-size: 11px; text-align: center; position: absolute; bottom: 0; }
@@ -101,4 +90,13 @@ body{
 }
 .bottom div small{
     color: #727272;
+}
+
+@media only screen and (max-width: 600px) {
+    body{
+        padding: 0 20px;
+    }
+    .card{
+        width: 100%;
+    }
 }
